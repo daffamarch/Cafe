@@ -127,26 +127,6 @@
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-<!-- Mobile Menu Drawer -->
-<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-8 md:hidden">
-<div class="flex justify-between items-center mb-12">
-<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
-<button id="close-menu-btn" class="text-primary p-2">
-<span class="material-symbols-outlined">close</span>
-</button>
-</div>
-<nav class="flex flex-col gap-6 text-xl">
-<a class="text-on-surface-variant" href="index.html">Beranda</a>
-<a class="text-on-surface-variant" href="menu.html">Menu</a>
-<a class="text-on-surface-variant" href="reservasi.html">Reservasi</a>
-<a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
-<a class="text-primary font-bold" href="lokasi.html">Lokasi</a>
-</nav>
-<div class="mt-auto">
-<a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
-            Order Now
-        </a>
-</div>
 </div>
 </div>
 </header>
@@ -308,6 +288,28 @@
 </div>
 </div>
 </footer>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-[#fff8f5] flex flex-col p-8 md:hidden">
+    <div class="flex justify-between items-center mb-12">
+        <span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+        <button id="close-menu-btn" class="text-primary p-2">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl">
+        <a class="text-on-surface-variant" href="index.html">Beranda</a>
+        <a class="text-on-surface-variant" href="menu.html">Menu</a>
+        <a class="text-on-surface-variant" href="reservasi.html">Reservasi</a>
+        <a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
+        <a class="text-primary font-bold" href="lokasi.html">Lokasi</a>
+    </nav>
+    <div class="mt-auto">
+        <a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
+            Order Now
+        </a>
+    </div>
+</div>
+
 <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const closeMenuBtn = document.getElementById('close-menu-btn');
@@ -315,10 +317,12 @@
 
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
     });
 
     closeMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
     });
 </script>
 </body></html>
