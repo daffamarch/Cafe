@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Brew Heaven - Rasa Nyaman di Setiap Seduhan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e8e1dd",
+                    "surface": "#fff8f5",
+                    "on-tertiary-fixed": "#071e26",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#283d45",
+                    "surface-dim": "#e0d9d5",
+                    "outline": "#80756c",
+                    "secondary": "#3b6934",
+                    "on-tertiary-fixed-variant": "#354a52",
+                    "inverse-primary": "#e1c1a4",
+                    "tertiary": "#12272f",
+                    "secondary-fixed": "#bcf0ae",
+                    "primary-fixed-dim": "#e1c1a4",
+                    "on-secondary": "#ffffff",
+                    "background": "#fff8f5",
+                    "on-tertiary-container": "#91a7b1",
+                    "secondary-container": "#b9eeab",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff8f5",
+                    "surface-container-low": "#faf2ee",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#33210d",
+                    "outline-variant": "#d2c4ba",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#33302d",
+                    "on-primary-fixed-variant": "#59422c",
+                    "on-secondary-fixed-variant": "#23501e",
+                    "tertiary-fixed-dim": "#b3cad4",
+                    "on-primary-container": "#bd9f83",
+                    "on-surface-variant": "#4e453d",
+                    "inverse-on-surface": "#f7efeb",
+                    "on-secondary-fixed": "#002201",
+                    "primary-fixed": "#fedcbe",
+                    "surface-container": "#f4ece9",
+                    "on-primary-fixed": "#291806",
+                    "primary-container": "#4b3621",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#cfe6f0",
+                    "on-background": "#1e1b19",
+                    "secondary-fixed-dim": "#a1d494",
+                    "surface-tint": "#725a42",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e8e1dd",
+                    "surface-container-high": "#eee7e3",
+                    "on-surface": "#1e1b19",
+                    "on-secondary-container": "#3f6d38",
+                    "burnt-orange": "#CC5500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "container-max-width": "1200px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Open Sans"],
+                    "body-md": ["Open Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "label-sm": ["Open Sans"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0px 10px 30px rgba(75, 54, 33, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="index.html">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="menu.html">Menu</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="reservasi.html" class="hidden md:block bg-primary text-on-primary px-8 py-3 rounded-full font-label-sm text-label-sm hover:opacity-80 transition-opacity">
+        Order Now
+    </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-8 md:hidden">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+<button id="close-menu-btn" class="text-primary p-2">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6 text-xl">
+<a class="text-primary font-bold" href="index.html">Beranda</a>
+<a class="text-on-surface-variant" href="menu.html">Menu</a>
+<a class="text-on-surface-variant" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="mt-auto">
+<a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
+            Order Now
+        </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Interior Brew Heaven" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop"/>
+<div class="absolute inset-0 bg-primary/30"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full">
+<div class="max-w-2xl text-white">
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Rasakan Kehangatan di Rumah Kedua Anda.</h1>
+<p class="font-body-lg text-body-lg mb-10 opacity-90 leading-relaxed">
+                Cafe cozy dan homey di sudut hangat Baleendah. Tempat pelarian sempurna untuk bersantai, bekerja, dan berbagi cerita.
+            </p>
+<a href="menu.html" class="bg-burnt-orange text-white px-10 py-4 rounded-full font-label-sm text-label-sm hover:brightness-110 transition-all soft-shadow inline-block">
+                Lihat Menu Digital
+            </a>
+</div>
+</div>
+</section><section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 space-y-6">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">Kehangatan Rumah</span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+                Filosofi Kami: Kenyamanan dalam Setiap Kebersamaan
+            </h2>
+<div class="space-y-4 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+                    Berawal dari kecintaan akan suasana rumah yang hangat, Brew Heaven hadir di Baleendah sebagai ruang komunal yang nyaman. Kami percaya bahwa setiap cangkir kopi lebih nikmat saat dinikmati dalam suasana yang santai dan homey.
+                </p>
+<p>
+                    Kami mengurasi biji kopi pilihan dan menyajikannya dengan hati, menciptakan ruang bagi Anda untuk melarikan diri sejenak dari rutinitas dan menemukan kehangatan sejati bersama orang-orang tersayang.
+                </p>
+</div>
+<div class="pt-4">
+<div class="inline-flex items-center gap-2 border-b border-primary pb-1 group cursor-pointer">
+<span class="font-label-sm text-label-sm text-primary uppercase">Selengkapnya</span>
+<span class="material-symbols-outlined text-primary text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="relative">
+<div class="absolute -inset-4 border border-outline-variant/30 rounded-xl -z-10 translate-x-2 translate-y-2"></div>
+<img alt="Cozy Cafe Interior" class="w-full aspect-[4/5] object-cover rounded-xl soft-shadow" src="297a259bf1f543f7a151d5b914b45709.webp"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital Menu Preview -->
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-8 bg-surface-container dark:bg-surface-container-highest border-t border-outline-variant dark:border-outline">
+<div class="max-w-container-max-width mx-auto w-full">
+<!-- Instagram Feed Row -->
+<div class="mb-16">
+<div class="flex items-center justify-between mb-6">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Follow Us @brewheaven</p>
+<a class="text-primary hover:underline font-label-sm text-label-sm" href="#">Follow</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden group">
+<div class="w-full h-full bg-gradient-to-br from-primary-container to-primary/40 opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden group">
+<div class="w-full h-full bg-gradient-to-br from-secondary/40 to-secondary-container opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden group">
+<div class="w-full h-full bg-gradient-to-br from-primary/40 to-burnt-orange opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden group">
+<div class="w-full h-full bg-gradient-to-br from-surface-dim to-outline opacity-20 group-hover:opacity-40 transition-opacity"></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-8">
+<div class="flex flex-col items-center md:items-start">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Brew Heaven</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2024 Brew Heaven. Cozy & Homey Cafe in Baleendah.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/daffa.march/">Instagram</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/6281223982073">WhatsApp</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body></html>

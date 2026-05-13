@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e8e1dd",
+                    "on-primary-container": "#bd9f83",
+                    "on-primary": "#ffffff",
+                    "secondary": "#3b6934",
+                    "on-tertiary-container": "#91a7b1",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f7efeb",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#e0d9d5",
+                    "background": "#fff8f5",
+                    "secondary-container": "#b9eeab",
+                    "surface-container-highest": "#e8e1dd",
+                    "surface-container-high": "#eee7e3",
+                    "inverse-primary": "#e1c1a4",
+                    "surface-bright": "#fff8f5",
+                    "secondary-fixed": "#bcf0ae",
+                    "on-secondary-fixed-variant": "#23501e",
+                    "outline-variant": "#d2c4ba",
+                    "surface-tint": "#725a42",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#33302d",
+                    "on-tertiary-fixed": "#071e26",
+                    "on-surface": "#1e1b19",
+                    "on-background": "#1e1b19",
+                    "on-primary-fixed": "#291806",
+                    "secondary-fixed-dim": "#a1d494",
+                    "primary-fixed": "#fedcbe",
+                    "tertiary-fixed": "#cfe6f0",
+                    "on-primary-fixed-variant": "#59422c",
+                    "on-tertiary-fixed-variant": "#354a52",
+                    "primary-fixed-dim": "#e1c1a4",
+                    "surface-container": "#f4ece9",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#faf2ee",
+                    "outline": "#80756c",
+                    "tertiary-container": "#283d45",
+                    "tertiary": "#12272f",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002201",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#b3cad4",
+                    "on-secondary-container": "#3f6d38",
+                    "on-surface-variant": "#4e453d",
+                    "surface": "#fff8f5",
+                    "primary-container": "#4b3621",
+                    "primary": "#33210d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "40px",
+                    "container-max-width": "1200px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Open Sans"],
+                    "body-lg": ["Open Sans"],
+                    "body-md": ["Open Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .soft-shadow { box-shadow: 0px 10px 30px rgba(75, 54, 33, 0.08); }
+        .pebble-mask { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .arch-mask { border-radius: 160px 160px 20px 20px; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #33210d !important; ring: 0 !important; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant h-20">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto transition-all duration-300 ease-in-out">
+<div class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="index.html">Beranda</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="menu.html">Menu</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold transition-colors duration-300" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lokasi.html">Lokasi</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="reservasi.html" class="hidden md:block bg-[#725a42] text-white px-8 py-3 rounded-full font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-all">
+        Order Now
+    </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-8 md:hidden">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+<button id="close-menu-btn" class="text-primary p-2">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6 text-xl">
+<a class="text-on-surface-variant" href="index.html">Beranda</a>
+<a class="text-on-surface-variant" href="menu.html">Menu</a>
+<a class="text-primary font-bold" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="mt-auto">
+<a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
+            Order Now
+        </a>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-section-gap pb-12 overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 z-10">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-[0.2em] mb-4 block">Sudut Hangat untuk Momen Berharga</span>
+<h1 class="text-display-lg font-display-lg text-primary mb-6">Reservasi Meja & Momen Hangat</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-md">
+                        Ciptakan kenangan indah dalam suasana cafe yang cozy dan homey. Tempat terbaik untuk berkumpul dan bercerita.
+                    </p>
+</div>
+<div class="md:col-span-6 relative">
+<div class="arch-mask overflow-hidden aspect-[4/5] bg-surface-variant">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1511018556340-d16986a1c194?q=80&w=2070&auto=format&fit=crop"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking Form Section -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-7">
+<div class="bg-surface p-8 md:p-12 rounded-xl soft-shadow">
+<h2 class="text-headline-lg font-headline-lg text-primary mb-8">Formulir Reservasi</h2>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Nama Lengkap</label>
+<input class="w-full bg-transparent py-2 border-none px-0 text-on-surface placeholder:text-outline-variant" placeholder="Masukkan nama Anda" type="text"/>
+</div>
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Nomor Telepon / WhatsApp</label>
+<input class="w-full bg-transparent py-2 border-none px-0 text-on-surface placeholder:text-outline-variant" placeholder="0812..." type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Jenis Acara</label>
+<select class="w-full bg-transparent py-2 border-none px-0 text-on-surface">
+<option>Hanya Berkunjung</option>
+<option>Birthday Party</option>
+<option>Business Meeting</option>
+<option>Gathering</option>
+<option>Lainnya</option>
+</select>
+</div>
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Jumlah Pax (Orang)</label>
+<input class="w-full bg-transparent py-2 border-none px-0 text-on-surface" min="1" placeholder="Masukkan jumlah orang" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Tanggal</label>
+<input class="w-full bg-transparent py-2 border-none px-0 text-on-surface" type="date"/>
+</div>
+<div class="relative border-b border-outline">
+<label class="text-label-sm font-label-sm text-primary mb-2 block">Waktu</label>
+<input class="w-full bg-transparent py-2 border-none px-0 text-on-surface" type="time"/>
+</div>
+</div>
+<button class="w-full md:w-auto bg-[#725a42] text-white px-12 py-4 rounded-full font-label-sm text-label-sm uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300" type="submit">
+                                Konfirmasi Reservasi
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container py-section-gap border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto gap-8">
+<div class="space-y-4">
+<div class="text-headline-sm font-headline-sm text-primary">Brew Heaven</div>
+<p class="text-on-surface-variant font-body-md max-w-xs">© 2024 Brew Heaven. Cozy & Homey Cafe in Baleendah.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="text-on-surface-variant font-body-md hover:text-primary underline transition-all" href="https://www.instagram.com/daffa.march/">Instagram</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary underline transition-all" href="https://wa.me/6281223982073">WhatsApp</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary underline transition-all" href="#">Kontak Kami</a>
+</div>
+</div>
+</footer>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body></html>

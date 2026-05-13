@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e8e1dd",
+                        "on-primary-container": "#bd9f83",
+                        "on-primary": "#ffffff",
+                        "secondary": "#3b6934",
+                        "on-tertiary-container": "#91a7b1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f7efeb",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e0d9d5",
+                        "background": "#fff8f5",
+                        "secondary-container": "#b9eeab",
+                        "surface-container-highest": "#e8e1dd",
+                        "surface-container-high": "#eee7e3",
+                        "inverse-primary": "#e1c1a4",
+                        "surface-bright": "#fff8f5",
+                        "secondary-fixed": "#bcf0ae",
+                        "on-secondary-fixed-variant": "#23501e",
+                        "outline-variant": "#d2c4ba",
+                        "surface-tint": "#725a42",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#33302d",
+                        "on-tertiary-fixed": "#071e26",
+                        "on-surface": "#1e1b19",
+                        "on-background": "#1e1b19",
+                        "on-primary-fixed": "#291806",
+                        "secondary-fixed-dim": "#a1d494",
+                        "primary-fixed": "#fedcbe",
+                        "tertiary-fixed": "#cfe6f0",
+                        "on-primary-fixed-variant": "#59422c",
+                        "on-tertiary-fixed-variant": "#354a52",
+                        "primary-fixed-dim": "#e1c1a4",
+                        "surface-container": "#f4ece9",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#faf2ee",
+                        "outline": "#80756c",
+                        "tertiary-container": "#283d45",
+                        "tertiary": "#12272f",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002201",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#b3cad4",
+                        "on-secondary-container": "#3f6d38",
+                        "on-surface-variant": "#4e453d",
+                        "surface": "#fff8f5",
+                        "primary-container": "#4b3621",
+                        "primary": "#33210d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "container-max-width": "1200px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Open Sans"],
+                        "body-lg": ["Open Sans"],
+                        "body-md": ["Open Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-mask {
+            clip-path: ellipse(90% 100% at 50% 0%);
+        }
+        .pebble-shape {
+            border-radius: 60% 40% 70% 30% / 30% 60% 40% 70%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md border-b border-outline-variant docked full-width top-0 sticky z-50 transition-all duration-300 ease-in-out h-20">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="index.html">Beranda</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-bold transition-colors duration-300" href="menu.html">Menu</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="reservasi.html" class="hidden md:block bg-primary text-white px-[32px] py-3 rounded-full font-label-sm text-label-sm hover:opacity-80 transition-opacity">
+        Order Now
+    </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-8 md:hidden">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+<button id="close-menu-btn" class="text-primary p-2">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6 text-xl">
+<a class="text-on-surface-variant" href="index.html">Beranda</a>
+<a class="text-primary font-bold" href="menu.html">Menu</a>
+<a class="text-on-surface-variant" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
+<a class="text-on-surface-variant" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="mt-auto">
+<a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
+            Order Now
+        </a>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<header class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop pt-16 pb-section-gap">
+<div class="flex flex-col md:flex-row items-end gap-12">
+<div class="md:w-5/12">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Menu Kami - Brew Heaven</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                        Menemukan kenyamanan dalam setiap tegukan. Dari biji kopi pilihan hingga hidangan rumah yang menghangatkan, kami menyajikan kurasi rasa untuk momen santai Anda di sudut hangat Baleendah.
+                    </p>
+</div>
+<div class="md:w-7/12 w-full h-[400px] overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Cozy cafe interior" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop"/>
+</div>
+</div>
+</header>
+<!-- Coffee Section -->
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">Coffee</h2>
+<div class="h-px flex-grow bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Category 1: Signature -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Signature</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-6">Racikan Khas Kami</p>
+</div>
+<div class="space-y-10">
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Kopi Susu Gula Aren</h4>
+<span class="font-body-md text-on-surface-variant">32k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">Espresso house blend dengan susu segar dan gula aren asli yang creamy.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Misty Highland Latte</h4>
+<span class="font-body-md text-on-surface-variant">38k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">Latte lembut dengan sentuhan madu hutan dan sedikit aroma kayu manis.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Iced Gula Aren Latte</h4>
+<span class="font-body-md text-on-surface-variant">32k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">Kesegaran espresso dengan susu dingin dan gula aren premium.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Bandung Cold Brew</h4>
+<span class="font-body-md text-on-surface-variant">35k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">Kopi seduh dingin selama 12 jam dengan karakter rasa yang lembut.</p>
+</div>
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Caramel Macchiato</h4>
+<span class="font-body-md text-on-surface-variant">38k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant italic">Perpaduan espresso, susu, dan sirup karamel yang manis dan gurih.</p>
+</div></div>
+</div>
+<!-- Featured Image Coffee -->
+<div class="md:col-span-4 relative flex items-center justify-center p-4">
+<div class="pebble-shape w-full aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb88WwgCCzKrNClMiSL49Yfx-VEzdydeuTATG0MTMAvzzBpcuYY49moAMvXM7eIDG0TyECOdKnQzndD-Ia4oLtgOQ6PSwo6zzVhOZ3XQg6XuCotRVkErP18lZ8q4QqNaa-T_BFEZkB7dtW54FhwrcXNUaX_ZhegoKa7YFji453Zd92VcWAOnqUya-Lcq6WChpFSAHc6nqkuiB4pIabnnwbzL-9LPU3ayPmn5Qp4ppbrd_81bAyi0CpjrIsNdHqa4ZzETJ-Qi74Y1Q"/>
+</div>
+</div>
+<!-- Category 2: Espresso & Manual -->
+<div class="md:col-span-4 space-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6">Espresso Based</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface">Americano</span>
+<span class="font-body-md text-on-surface-variant">28k</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface">Cappuccino</span>
+<span class="font-body-md text-on-surface-variant">35k</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface">Flat White</span>
+<span class="font-body-md text-on-surface-variant">35k</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6">Manual Brew</h3>
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-md font-bold text-on-surface">V60 Single Origin</span>
+<span class="font-body-md text-on-surface-variant">42k</span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Pilihan Biji: Preanger, Malabar, atau Ciwidey. Tanyakan barista untuk panen terbaru.</p>
+<div class="flex gap-2 mt-4">
+<span class="text-[10px] uppercase font-bold text-secondary border border-secondary px-2 py-0.5 rounded-full">Local Beans</span>
+<span class="text-[10px] uppercase font-bold text-secondary border border-secondary px-2 py-0.5 rounded-full">Award Winning</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Non-Coffee Section -->
+<section class="bg-surface-container-lowest py-section-gap">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-px flex-grow bg-outline-variant"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary text-center">Non-Coffee</h2>
+<div class="h-px flex-grow bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Tea Selection -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant hover:shadow-[0px_10px_30px_rgba(75,54,33,0.08)] transition-all">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Artisan Tea</h3>
+<ul class="space-y-4">
+<li class="flex justify-between">
+<span class="text-body-md">White Tea (Cianjur)</span>
+<span class="font-bold">45k</span>
+</li>
+<li class="flex justify-between">
+<span class="text-body-md">Sencha Green Tea</span>
+<span class="font-bold">32k</span>
+</li>
+<li class="flex justify-between">
+<span class="text-body-md">Chamomile Blend</span>
+<span class="font-bold">35k</span>
+</li>
+<li class="flex justify-between">
+<span class="text-body-md">Earl Grey Milk Tea</span>
+<span class="font-bold">35k</span>
+</li>
+<li class="flex justify-between">
+<span class="text-body-md">Matcha Latte</span>
+<span class="font-bold">38k</span>
+</li>
+<li class="flex justify-between">
+<span class="text-body-md">Tropical Fruit Punch</span>
+<span class="font-bold">42k</span>
+</li></ul>
+</div>
+<!-- Featured Mocktail -->
+<div class="md:col-span-2 relative h-[400px] md:h-auto group overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4rS7pjso56mlXDDaa1zTAqzHiImyx0oHiBKrscD_IiFhkmkIsPvhm4BIaJ9dV8xnyouEI4JKqVM9rmOQrIKwp4m0Lf03ohSehYIKkEdRtE6_gYg9lqqkdbIvpKx_5t8huzDu8ckpgS4ETJF4NcTEPmKpxK6c92ERCSLUM-SNI9XZgSWTzYcdIv5dpd3G8bOfDyXqXDrz-pWactJwbbBJt3L_0iE9RJz9sNAdOfDjHT5fdLaEizQVnyW06me-Z-r6s67E0XbPI_WA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<span class="text-white/80 text-label-sm font-label-sm uppercase tracking-widest mb-2">Refreshing Mix</span>
+<h3 class="text-white font-headline-lg text-headline-lg mb-4">Baleendah Breeze Mocktail</h3>
+<p class="text-white/90 text-body-md max-w-md">Perpaduan cold brew tea, sirup peach buatan rumah, dan soda dengan aroma mint yang menyejukkan. <span class="ml-4 font-bold">35k</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Food Section -->
+<section class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+<h2 class="font-display-lg text-display-lg text-primary">Local Wisdom &amp; Pastries</h2>
+<p class="text-on-surface-variant font-body-md max-w-sm">Dibuat segar setiap hari menggunakan bahan-bahan lokal pilihan untuk rasa yang homey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Local Wisdom -->
+<div class="space-y-12">
+<div class="flex items-center gap-4 mb-4">
+<h3 class="font-headline-md text-headline-md text-secondary">Local Wisdom</h3>
+<div class="flex-grow h-px bg-outline-variant"></div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="OIP.webp"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between mb-1">
+<h4 class="font-headline-md text-headline-md">Nasi Goreng Ayam</h4>
+<span class="font-body-md">45k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-2">Nasi goreng rempah tradisional dengan ayam goreng bumbu kuning yang gurih.</p>
+<span class="text-[10px] uppercase font-bold text-secondary border border-secondary px-2 py-0.5 rounded-full">House Special</span>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXPJOfsrDBPVbW5yqHFUQZFjnPVmri7cYE0FZEITRTr7DCfiVp7SBBhqmj8Ml0pemi7gPtCrWJy74E_ZCA6wire0gzYZSBBJnZ-rsbxjcFT3Xpp2VWA5YScT_BgfCHTexx1TrRcxzdCUWI7RpLAEup44wRt7hHm8O5Ps_2lTrP7P6NgI2ySWIbLCsgCu3JG0yI6gomfI1qJAAKRKoYDmTDFZdZZ5nWq0tXSRf0IlQy0wLbJni_WxpNy6QQ2UTi_jXqf4mVXSPBX9w"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between mb-1">
+<h4 class="font-headline-md text-headline-md">Batagor Premium</h4>
+<span class="font-body-md">48k</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">Bakso tahu goreng tenggiri asli dengan bumbu kacang yang dihaluskan secara tradisional.</p>
+</div>
+</div>
+</div>
+<!-- Pastries -->
+<div class="space-y-12">
+<div class="flex items-center gap-4 mb-4">
+<h3 class="font-headline-md text-headline-md text-secondary">Pastries</h3>
+<div class="flex-grow h-px bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<div class="flex justify-between items-start border-b border-outline-variant pb-6">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Butter Croissant</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Lapis demi lapis kelembutan dengan aroma butter Prancis premium.</p>
+</div>
+<span class="font-headline-md text-headline-md">28k</span>
+</div>
+<div class="flex justify-between items-start border-b border-outline-variant pb-6">
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Almond Pain au Chocolat</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Pastry cokelat dengan topping almond panggang yang melimpah.</p>
+</div>
+<span class="font-headline-md text-headline-md">35k</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container full-width py-section-gap border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto gap-8">
+<div class="space-y-4">
+<span class="text-headline-sm font-headline-sm text-primary">Brew Heaven</span>
+<p class="text-body-md font-body-md text-on-surface-variant">© 2024 Brew Heaven. Cozy & Homey Cafe in Baleendah.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="https://www.instagram.com/daffa.march/">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="https://wa.me/6281223982073">WhatsApp</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="#">Kontak Kami</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all" href="#">Kebijakan Privasi</a>
+</div>
+</div>
+</footer>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body></html>

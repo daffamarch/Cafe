@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lokasi - Brew Heaven</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#3f6d38",
+                    "surface-container-high": "#eee7e3",
+                    "on-surface": "#1e1b19",
+                    "surface-variant": "#e8e1dd",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#725a42",
+                    "secondary-fixed-dim": "#a1d494",
+                    "tertiary-fixed": "#cfe6f0",
+                    "on-background": "#1e1b19",
+                    "error-container": "#ffdad6",
+                    "primary-container": "#4b3621",
+                    "on-primary-fixed": "#291806",
+                    "surface-container": "#f4ece9",
+                    "primary-fixed": "#fedcbe",
+                    "on-secondary-fixed": "#002201",
+                    "on-surface-variant": "#4e453d",
+                    "on-primary-container": "#bd9f83",
+                    "inverse-on-surface": "#f7efeb",
+                    "tertiary-fixed-dim": "#b3cad4",
+                    "on-secondary-fixed-variant": "#23501e",
+                    "on-primary-fixed-variant": "#59422c",
+                    "inverse-surface": "#33302d",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#d2c4ba",
+                    "primary": "#33210d",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#faf2ee",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fff8f5",
+                    "secondary-container": "#b9eeab",
+                    "on-tertiary-container": "#91a7b1",
+                    "background": "#fff8f5",
+                    "primary-fixed-dim": "#e1c1a4",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#bcf0ae",
+                    "tertiary": "#12272f",
+                    "inverse-primary": "#e1c1a4",
+                    "on-tertiary-fixed-variant": "#354a52",
+                    "secondary": "#3b6934",
+                    "outline": "#80756c",
+                    "surface-dim": "#e0d9d5",
+                    "tertiary-container": "#283d45",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#071e26",
+                    "surface": "#fff8f5",
+                    "surface-container-highest": "#e8e1dd",
+                    "burnt-orange": "#CC5500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max-width": "1200px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "margin-desktop": "40px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Open Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Open Sans"],
+                    "body-lg": ["Open Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .soft-shadow { box-shadow: 0px 10px 30px rgba(75, 54, 33, 0.08); }
+        .pebble-mask { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/95 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant h-20">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md text-primary">Brew Heaven</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Beranda</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="reservasi.html">Reservasi</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="testimoni.html">Testimoni</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 font-bold" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="reservasi.html" class="hidden md:block bg-primary text-white px-8 py-3 rounded-full font-label-sm text-label-sm uppercase tracking-wider hover:opacity-90 transition-all">
+        Order Now
+    </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-surface flex flex-col p-8 md:hidden">
+<div class="flex justify-between items-center mb-12">
+<span class="text-headline-md font-headline-md text-primary tracking-tight">Brew Heaven</span>
+<button id="close-menu-btn" class="text-primary p-2">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6 text-xl">
+<a class="text-on-surface-variant" href="index.html">Beranda</a>
+<a class="text-on-surface-variant" href="menu.html">Menu</a>
+<a class="text-on-surface-variant" href="reservasi.html">Reservasi</a>
+<a class="text-on-surface-variant" href="testimoni.html">Testimoni</a>
+<a class="text-primary font-bold" href="lokasi.html">Lokasi</a>
+</nav>
+<div class="mt-auto">
+<a href="reservasi.html" class="w-full bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm text-center block">
+            Order Now
+        </a>
+</div>
+</div>
+</div>
+</header>
+
+<main class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Header Section -->
+<section class="mb-16 text-center md:text-left max-w-2xl">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-[0.2em] mb-4 block">Temukan Kami</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Kunjungi Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic leading-relaxed">Nikmati suasana cozy dan homey kami di sudut tenang Baleendah.</p>
+<div class="flex items-center gap-4 mt-4 flex-wrap justify-center md:justify-start">
+    <div class="flex items-center gap-1 text-primary font-bold">
+        <span class="text-lg">4.8</span>
+        <div class="flex text-burnt-orange text-sm">
+            <span class="material-symbols-outlined fill-1" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined fill-1" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined fill-1" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined fill-1" style="font-size: 16px;">star</span>
+            <span class="material-symbols-outlined fill-1" style="font-size: 16px;">star</span>
+        </div>
+        <span class="text-on-surface-variant font-normal text-sm">(106)</span>
+    </div>
+    <span class="text-on-surface-variant">•</span>
+    <span class="text-primary font-semibold">Rp 25–50 rb</span>
+    <span class="text-on-surface-variant">•</span>
+    <span class="text-secondary font-bold">Kafe</span>
+</div>
+</section>
+
+<!-- Main Content: Asymmetric Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Side: Map Illustration -->
+<div class="md:col-span-7 relative">
+<div class="w-full aspect-square md:aspect-[4/5] bg-surface-container-high overflow-hidden rounded-2xl soft-shadow border border-outline-variant">
+<img class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply hover:grayscale-0 transition-all duration-700" alt="Map Illustration of Bandung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZMB_A6BsQuYTQEZG6AsJm-Vsevl0giXdoSOXfNuOc-O8J0ayVdnAmWdq2-BWOWx7ooZtAsKRwkpCCUNxkiYL0aUxSVLBtlBnJsOup1Hqu9sZi0l2Pc8ESW5kJgd3KEI4mRPcInb1p-xKvrcSXIV5W5tmMWQVGC0-yXEvhfWjJBTTWjdBwea2i7e1cBK2GQfrgxO0_zt3QmOHEpi857Gw1b5izABJzVXI0_ycC08O9Zk5B__alnevL7IhBbcBZuNNutqM6MDigmLc"/>
+<!-- Floating Location Marker -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-4 h-4 bg-burnt-orange rounded-full animate-ping absolute"></div>
+<div class="w-4 h-4 bg-burnt-orange rounded-full border-2 border-white relative z-10"></div>
+<div class="mt-2 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-xl text-primary font-bold soft-shadow border border-outline-variant/30">
+                            Brew Heaven
+                        </div>
+</div>
+</div>
+</div>
+
+<!-- Right Side: Details -->
+<div class="md:col-span-4 md:col-start-9 space-y-12">
+<!-- Address Section -->
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full">location_on</span>
+<h3 class="font-headline-md text-headline-md text-primary">Alamat</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Jl. Jaksa Naranata, Baleendah, Kec. Baleendah,<br/>
+                        Kabupaten Bandung, Jawa Barat 40375
+                    </p>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4">
+                        <div class="flex items-center gap-2 text-sm text-secondary">
+                            <span class="material-symbols-outlined text-sm">check_circle</span> Makan di tempat
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-secondary">
+                            <span class="material-symbols-outlined text-sm">directions_car</span> Drive-through
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-secondary">
+                            <span class="material-symbols-outlined text-sm">delivery_dining</span> Antar tanpa bertemu
+                        </div>
+                    </div>
+</div>
+
+<!-- Hours Section -->
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full">schedule</span>
+<h3 class="font-headline-md text-headline-md text-primary">Jam Operasional</h3>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center border-b border-outline-variant/30 pb-3">
+<span class="font-body-md text-on-surface-variant">Senin - Minggu</span>
+<span class="font-bold text-primary">08:00 - 22:00</span>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-container text-on-secondary-container text-label-sm rounded-full">
+    <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+    Buka Sekarang
+</div>
+</div>
+</div>
+
+<!-- Contact Section -->
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-full">contact_support</span>
+<h3 class="font-headline-md text-headline-md text-primary">Kontak</h3>
+</div>
+<div class="space-y-6">
+<a class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors group" href="https://wa.me/6281223982073">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-body-md">WhatsApp Business</span>
+</a>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">public</span>
+</a>
+</div>
+</div>
+</div>
+
+<!-- CTA -->
+<div class="pt-6">
+<button class="w-full bg-burnt-orange text-white py-5 px-8 rounded-full font-bold flex justify-center items-center gap-3 hover:brightness-110 transition-all soft-shadow">
+<span class="material-symbols-outlined">map</span>
+                        Buka di Google Maps
+                    </button>
+<p class="text-center font-label-sm text-on-surface-variant mt-4 opacity-70 italic">Tersedia area parkir luas di gedung belakang.</p>
+</div>
+</div>
+</div>
+
+<!-- Ambience Section -->
+<section class="mt-section-gap grid grid-cols-1 md:grid-cols-2 gap-16 items-center border-t border-outline-variant/30 pt-section-gap">
+<div class="order-2 md:order-1 space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-primary">Suasana Kami</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Brew Heaven hadir sebagai oase kenyamanan di Baleendah. Ruang kami dirancang dengan konsep rumah kedua yang hangat, menggunakan elemen kayu alami dan pencahayaan yang lembut untuk menciptakan atmosfer yang santai.
+                </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-surface-container-high text-primary text-label-sm rounded-full font-bold">Cozy & Homey</span>
+<span class="px-4 py-2 bg-surface-container-high text-primary text-label-sm rounded-full font-bold">Community Hub</span>
+<span class="px-4 py-2 bg-surface-container-high text-primary text-label-sm rounded-full font-bold">Baleendah Best Spot</span>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<div class="relative">
+    <div class="absolute -inset-4 border border-outline-variant/20 rounded-3xl -z-10 translate-x-2 translate-y-2"></div>
+    <img class="w-full h-[450px] object-cover rounded-2xl soft-shadow" alt="Interior view of Brew Heaven" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=2070&auto=format&fit=crop"/>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant/30 mt-section-gap">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-md text-headline-md text-primary">Brew Heaven</div>
+<div class="flex gap-8">
+<a class="text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/daffa.march/">Instagram</a>
+<a class="text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/6281223982073">WhatsApp</a>
+<a class="text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Facebook</a>
+<a class="text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="text-label-sm text-on-surface-variant opacity-70">
+                © 2024 Brew Heaven. Cozy & Homey Cafe in Baleendah.
+            </div>
+</div>
+</div>
+</footer>
+<script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+</body></html>
